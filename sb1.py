@@ -94,6 +94,7 @@ def SEND_MESSAGE(op):
                 pass
         if msg.toType == 2:
             if msg.contentType == 0:
+#--------------------------------------------------------------
 		if msg.text == "Selow":
                     print "ok"
                     _name = msg.text.replace("Halo teman - teman...")
@@ -114,6 +115,7 @@ def SEND_MESSAGE(op):
                                 print (msg.to,[g.mid])
                             except:
 				sendText(msg.to,"error")
+#--------------------------------------------------------------
             	if msg.text == "Speed":
                 	start = time.time()
                 	sendMessage(msg.to, "Progress...")
