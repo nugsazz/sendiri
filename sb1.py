@@ -114,49 +114,13 @@ def SEND_MESSAGE(op):
                                 print (msg.to,[g.mid])
                             except:
 				sendText(msg.to,"error")
-            	if msg.text == "Creator":
-			msg.contentType = 13
-			msg.contentMetadata = {'mid': "u813e54635fa8ca8c016090e933582652"}
-			sendMessage(msg)
-            	if msg.text == "Gcreator":
-                    	group = client.getGroup(msg.to)
-                    	gCreator = ginfo.creator.mid
-                    	try:
-                        	msg.contentMetadata = {'mid': gCreator}
-                        	gCreator1 = ginfo.creator.displayName
-                        
-                    	except:
-                        	gCreator = "Error"
-                    	sendMessage(msg.to, "Group Creator : " + gCreator1)
-			sendMessage(msg)
-            	if msg.text == "Tagall":
-                	group = client.getGroup(msg.to)
-                	nama = [contact.mid for contact in group.members]
-                	cb = ""
-                	cb2 = ""
-                	strt = int(0)
-                	akh = int(0)
-                	for md in nama:
-                    		akh = akh + int(5)
-                    		cb += """{"S":"""+json.dumps(str(strt))+""","E":"""+json.dumps(str(akh))+""","M":"""+json.dumps(md)+"},"""
-                    		strt = strt + int(6)
-                    		akh = akh + 1
-                    		cb2 += "@nrik\n"
-                	cb = (cb[:int(len(cb)-1)])
-                	msg.contentType = 0
-                	msg.text = cb2
-                	msg.contentMetadata ={'MENTION':'{"MENTIONEES":['+cb+']}','EMTVER':'4'}
-                	try:
-                    		sendMessage(msg)
-                	except Exception as error:
-				print error
             	if msg.text == "Speed":
                 	start = time.time()
                 	sendMessage(msg.to, "Progress...")
                 	elapsed_time = time.time() - start
 			sendMessage(msg.to, "%sseconds" % (elapsed_time))
 		if msg.text == "Respon":
-			sendMessage(msg.to,"[BLVCK DRVGON]™ ready to play!")
+			sendMessage(msg.to,"[BLVCK DRVGON]™ ready to play")
                 if msg.text == "Mid":
                     sendMessage(msg.to, msg.from_)
                 if msg.text == "Gid":
