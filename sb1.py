@@ -16,48 +16,6 @@ offbot, messageReq, wordsArray, waitingAnswer = [], {}, {}, {}
 
 print client._loginresult()
 
-helpMessage =""" SelfBOT
-]|I{•----» •㉿Continental™ «----•}I|[
-======================================
-[Administrator by]
-• [BLVCK DRAGON]™
-• CNN/Bot Division 
-• BD.CBOT-188
-
--㉿- Command SelfBot -㉿-
---------------------------------------
-[Help] -- Melihat command bot
-[Mid] -- Melihat id
-[Me︎] -- Melihat userid
-[Respon] -- Mengetes respon bot
-[Speed] -- Melihat kecepatan
-[Creator] -- Melihat pembuat bot
-[Say] -- Mengikuti apa yang diKatakan
-
-[Gid] -- Melihat id grup
-[Ginfo] -- Melihat info grup
-[Time] -- Melihat waktu
-[Gift] -- Memberi hadiah
-[Open] -- Membuka URL grup
-[Close] -- Menutup URL grup
-[Url] -- Melihat URL grup
-[Cancel] -- Membatalkan semua undangan grup
-[Set] -- Set last point
-[Read] -- View last seen
-[Tagall] -- Mention semua member grup
-
-[Kk @] -- Hapus member grup dengan mention
-[Selow] -- Hapus semua member grup
-======================================
-Respect with our people then 
-they will respect to you too.
-Enjoy and relax sir!
-
-[Author By]
-- B L V C K  H I T T E R -
-{ •㉿Continental™• }
-"""
-
 wait = {
     'readPoint':{},
     'readMember':{},
@@ -156,10 +114,6 @@ def SEND_MESSAGE(op):
                                 print (msg.to,[g.mid])
                             except:
 				sendText(msg.to,"error")
-            	if msg.text == "Help":
-			if wait["lang"] == "JP":
-                    	sendMessage(msg.to,helpMessage)
-                	sendMessage(msg.to,helpt)
             	if msg.text == "Creator":
 			msg.contentType = 13
 			msg.contentMetadata = {'mid': "u813e54635fa8ca8c016090e933582652"}
@@ -175,16 +129,6 @@ def SEND_MESSAGE(op):
                         	gCreator = "Error"
                     	sendMessage(msg.to, "Group Creator : " + gCreator1)
 			sendMessage(msg)
-            	if msg.text == "Say"
-			bctxt = msg.text.replace("Say ","")
-			sendMessage(msg.to,(bctxt))
-			sendMessage(msg.to,(bctxt))
-			sendMessage(msg.to,(bctxt))
-			sendMessage(msg.to,(bctxt))
-			sendMessage(msg.to,(bctxt))
-			sendMessage(msg.to,(bctxt))
-			sendMessage(msg.to,(bctxt))
-			sendMessage(msg.to,(bctxt))
             	if msg.text == "Kk"
                 	key = eval(msg.contentMetadata["MENTION"])
                 	key["MENTIONEES"][0]["M"]
@@ -223,7 +167,7 @@ def SEND_MESSAGE(op):
                 	elapsed_time = time.time() - start
 			sendMessage(msg.to, "%sseconds" % (elapsed_time))
 		if msg.text == "Respon":
-			sendMessage(msg.to,"[BLVCK DRVGON]™ ready 􀨁􀄻double thumbs up􏿿")
+			sendMessage(msg.to,"[BLVCK DRVGON]™ ready to play!")
                 if msg.text == "Mid":
                     sendMessage(msg.to, msg.from_)
                 if msg.text == "Gid":
