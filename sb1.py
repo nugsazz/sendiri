@@ -129,17 +129,6 @@ def SEND_MESSAGE(op):
                         	gCreator = "Error"
                     	sendMessage(msg.to, "Group Creator : " + gCreator1)
 			sendMessage(msg)
-            	if msg.text == "Kk"
-                	key = eval(msg.contentMetadata["MENTION"])
-                	key["MENTIONEES"][0]["M"]
-                	targets = []
-                	for x in key["MENTIONEES"]:
-                    		targets.append(x["M"])
-                	for target in targets:
-                   	try:
-                      		client.kickoutFromGroup(msg.to,[target])
-                   	except:
-				pass			
             	if msg.text == "Tagall":
                 	group = client.getGroup(msg.to)
                 	nama = [contact.mid for contact in group.members]
