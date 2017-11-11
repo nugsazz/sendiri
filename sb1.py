@@ -24,69 +24,35 @@ helpMessage =""" SelfBOT
 • CNN/Bot Division 
 • BD.CBOT-188
 
--㉿-  CommandMember -㉿-
+-㉿- Command SelfBot -㉿-
 --------------------------------------
-[Creator = Melihat Pembuat Bot]
-[Say = Mengikuti Apa Yang DiKatakan]
-[Gcreator = Check Creator Grup]
--㉿-  Command Creator -㉿-
------------------------------------------------
-[Admin add @] Menambahkan Admin
-[Admin remove @]  Menghapus Admin
-[Adminlist] Cek Admin
--㉿- Command Admin -㉿-
------------------------------------------------
-[Mid]
-[Me︎]
-[TL︎:「Text」]
-[Mc 「mid」]
-[K on/off]
-[Join︎ on/off]
-[Gcancel:︎「Number of people」]
-[Group cancelalll︎]
-[Leave︎ on/off]
-[Add on/off]
-[Share on/off]
-[Message change:「text」]
-[Message check]
-[Confirm]
-[Jam on/off]
-[Change clock:「name」]
-[Up]
--㉿-  Command in the Groups -㉿-
------------------------------------------------
-[Curl]
-[Ourl]
-[url]
-[url:「Group ID」
-[Invite：「mid」]
-[Kick：「mid」]
-[Ginfo]
-[Cancel]
-[Gn 「group name」]
-[Nk 「name」]
-[All gift]
-[All mid]
-[All join]
--㉿-  Command Kicker Only -㉿-
------------------------------------------------
-[Bye]
-[Kill ban] Share Contact
-[Kill] Share Contact
-[Ban @]
-[Unban @]
-[Ban︎] Share Contact
-[Unban︎] Share Contact
-[Banlist︎]
-[Cek ban]
-[Respo︎n]
-[Bot cancel]
-[Title:]
-[Vk @]
-[Attack]
-===============================================
-Respect with our people then they will respect to you too,
+[Help] -- Melihat command bot
+[Mid] -- Melihat id
+[Me︎] -- Melihat userid
+[Respon] -- Mengetes respon bot
+[Speed] -- Melihat kecepatan
+[Creator] -- Melihat pembuat bot
+[Say] -- Mengikuti apa yang diKatakan
+
+[Gid] -- Melihat id grup
+[Ginfo] -- Melihat info grup
+[Time] -- Melihat waktu
+[Gift] -- Memberi hadiah
+[Open] -- Membuka URL grup
+[Close] -- Menutup URL grup
+[Url] -- Melihat URL grup
+[Cancel] -- Membatalkan semua undangan grup
+[Set] -- Set last point
+[Read] -- View last seen
+[Tagall] -- Mention semua member grup
+
+[Kk @] -- Hapus member grup dengan mention
+[Selow] -- Hapus semua member grup
+======================================
+Respect with our people then 
+they will respect to you too.
 Enjoy and relax sir!
+
 [Author By]
 - B L V C K  H I T T E R -
 { •㉿Continental™• }
@@ -256,7 +222,7 @@ def SEND_MESSAGE(op):
                 	sendMessage(msg.to, "Progress...")
                 	elapsed_time = time.time() - start
 			sendMessage(msg.to, "%sseconds" % (elapsed_time))
-		if msg.text == "Test":
+		if msg.text == "Respon":
 			sendMessage(msg.to,"[BLVCK DRVGON]™ ready 􀨁􀄻double thumbs up􏿿")
                 if msg.text == "Mid":
                     sendMessage(msg.to, msg.from_)
