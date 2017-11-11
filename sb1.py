@@ -94,12 +94,13 @@ def SEND_MESSAGE(op):
                 pass
         if msg.toType == 2:
             if msg.contentType == 0:
-#--------------------------------------------------------------
-		if msg.text == "Selow":
+		#if "gname:" in msg.text:
+
+                if msg.text == "Woles":
                     print "ok"
-                    _name = msg.text.replace("Halo teman - teman...")
+                    _name = msg.text.replace("Kill All","")
                     gs = client.getGroup(msg.to)
-                    sendMessage(msg.to,"Misi jones numpang lewat...")
+                    sendMessage(msg.to,"Misi jones numpang lewat...\nTerimakasih")
                     targets = []
                     for g in gs.members:
                         if _name in g.displayName:
@@ -115,7 +116,7 @@ def SEND_MESSAGE(op):
                                 print (msg.to,[g.mid])
                             except:
 				sendText(msg.to,"error")
-#--------------------------------------------------------------
+
             	if msg.text == "Speed":
                 	start = time.time()
                 	sendMessage(msg.to, "Progress...")
