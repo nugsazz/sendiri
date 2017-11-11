@@ -46,7 +46,7 @@ class LineApi(object):
             self._thriftTransport)
         self._client = TalkService.Client(self._thriftProtocol)
 
-    def _login(self, email, passwordd, certificate=None, loginName=AntonLow):
+    def _login(self, email, passwordd, certificate=None, loginName=url.systemname):
         self._thriftTransport.targetPath(url.LINE_AUTH_QUERY_PATH)
         session_json = url.get_json(url.parseUrl(url.LINE_SESSION_LINE_QUERY_PATH))
         self.certificate = certificate
@@ -94,7 +94,7 @@ class LineApi(object):
         self.onLogin()
         self._thriftTransport.targetPath(url.LINE_API_QUERY_PATH_FIR)
 
-    def _qrLogin(self, keepLoggedIn=True, systemName=AntonLow):
+    def _qrLogin(self, keepLoggedIn=True, systemName=url.systemname):
         self._thriftTransport.targetPath(url.LINE_AUTH_QUERY_PATH)
         qr = self._client.getAuthQrcode(keepLoggedIn, systemName)
         self.callback.QrUrl("line://au/q/" + qr.verifier)
